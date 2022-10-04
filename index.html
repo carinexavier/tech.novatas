@@ -1,47 +1,187 @@
-<!DOCTYPE html> <!-- DTD - Definição de tipo de documento-->
-<html lang="pt"> <!--Tipo o main no C, inicio do html-->
+<!DOCTYPE html>
 
-<head> <!-- ainda não é o documento, mas são informações importantes chamadas metadados-->
-    <meta charset="UTF-8"> <!--é a codificação de caracteres global-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--A pagina se ajusta a resoluçã ode telas diferentes (Responsividade)-->
-    <meta name="author" content="Manuela Fernandes"> <!--autor do codigo-->
-    <title>Tech Novatas</title> <!--cada pagina tem que ter o seu titulo-->
+<!-- Referências: https://www.w3schools.com/html/ -->
+
+<!-- Início do documento HTML -->
+<html lang="pt-br">
+
+<!-- Cabeçalho com metadados do documento -->
+
+<head>
+
+    <!-- Carrega a tabela de caracteres universal -->
+    <meta charset="UTF-8">
+
+    <!-- Deixa a página responsiva -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Carrega a folha de estilos do aplicativo -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- Carrega o CSS específico da página que está sendo acessada -->
+    <link rel="stylesheet" href="" id="pageCSS">
+
+    <!-- 
+        Carrega a biblioteca de ícones "Font Awesome" à partir do CDNJS.
+        Para saber mais sobre a Font Awesome, acesse o link:
+        https://fontawesome.com/docs
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- Ícone dos favoritos -->
+    <link rel="shortcut icon" href="/img/favicon.png">
+
+    <!-- Título do documento -->
+    <title>Tech.Novatas</title>
+
 </head>
 
-<header> <!--cabeçalho-->
-   <h1><strong>Tech.Novatas</strong></h1>
-    <hr>
-</header>
+<body>
 
-<body> <!--conteudo visual, tudo que vai aparecer-->
+    <!-- Âncora de retorno -->
+    <a id="top"></a>
 
-    Menu principal
+    <!-- Wrap da página -->
+    <div id="wrap">
 
-    <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="contatos.html">Contatos</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-    </ul>
+        <!-- Cabeçalho -->
+        <header>
 
-    Estou com fome!
-    <br>
-    Estou com sede!
-    <hr>
-    <img src="https://picsum.photos/id/237/200/300" alt = "Imagem Aleatória">
-    <hr>
+            <!-- Logotipo usando Font Awesome -->
+            <a href="home" title="Página inicial">
+                <!-- <i class="fa-fw fa-solid fa-laptop-code" title="Logotipo de Tech.Novatas"></i> -->
+                <img src="/img/logo01.png" alt="Logotipo de Tech.Novatas">
+            </a>
 
-    <P>
-        AU <strong>AU</strong>AU AU<em>AU</em> AU AU
+            <!-- Nome / slogan do site -->
+            <h1>
+                Tech.Novatas
+                <span>Toda mulher é capaz de tudo, inclusive programar.</span>
+            </h1>
+        </header>
 
-    </P>
+        <!-- Menu principal -->
+        <nav>
 
-    <hr>
+            <!-- Item do menu -->
+            <a href="home" title="Página inicial">
 
-    <a href="https://catabits.com.br" target="_blank">Site do fessô</a>
+                <!-- Ícone do item usando Font Awesome -->
+                <i class="fa-fw fa-solid fa-house-chimney"></i>
 
-    <hr>
+                <!-- Etiqueta (label) do item -->
+                <span>Início</span>
+            </a>
 
-    <input type="text" valeu="J" readonly>
+            <!-- Próximos itens do menu são similares ao anterior -->
+            <a href="contacts">
+                <i class="fa-fw fa-solid fa-comment-dots"></i>
+                <span>Contatos</span>
+            </a>
+            <a href="about">
+                <i class="fa-fw fa-solid fa-circle-info"></i>
+                <span>Sobre</span>
+            </a>
+            <a href="profile">
+                <i class="fa-fw fa-solid fa-user"></i>
+                <span>Login</span>
+            </a>
+
+        </nav>
+
+        <!-- Conteúdo -->
+        <main id="content"></main>
+
+        <!-- Rodapé -->
+        <footer>
+
+            <div id="ftop">
+
+                <!-- Link para a página inicial -->
+                <a href="home" title="Página inicial">
+                    <i class="fa-fw fa-solid fa-house-chimney"></i>
+                </a>
+
+                <!-- Licença do aplicativo -->
+                <div>&copy; 2022 Tech.Novatas</div>
+
+                <!-- Link para o topo desta página -->
+                <a href="#top">
+                    <i class="fa-fw fa-solid fa-circle-up"></i>
+                </a>
+
+            </div>
+
+            <div id="fbottom">
+
+                <nav>
+                    <h4>Redes sociais:</h4>
+                    <a href="https://facebook.com/Tech.Novatas" target="_blank">
+                        <i class="fa-brands fa-facebook fa-fw"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://youtube.com/Tech.Novatas" target="_blank">
+                        <i class="fa-brands fa-youtube fa-fw"></i>
+                        <span>Youtube</span>
+                    </a>
+                    <a href="https://githu.com/Tech.Novatas" target="_blank">
+                        <i class="fa-brands fa-github fa-fw"></i>
+                        <span>GitHub</span>
+                    </a>
+                </nav>
+
+                <nav>
+
+                    <h4>Links rápidos:</h4>
+                    <a href="contacts">
+                        <i class="fa-fw fa-solid fa-comment-dots"></i>
+                        <span>Contatos</span>
+                    </a>
+                    <a href="about">
+                        <i class="fa-fw fa-solid fa-circle-info"></i>
+                        <span>Sobre</span>
+                    </a>
+                    <a href="policies">
+                        <i class="fa-solid fa-user-lock fa-fw"></i>
+                        <span>Privacidade</span>
+                    </a>
+
+                </nav>
+
+            </div>
+
+        </footer>
+
+        <!-- Rack que aplica margem inferior a <footer> -->
+        <span>&nbsp;</span>
+
+    </div>
+
+    <!-- Mensagem sobre o uso de cookies -->
+    <div id="msgCookies">
+
+        <div class="msg-cookies">
+
+            <div>
+                Nosso site usa cookies para que você tenha uma melhor experiência de navegação e segurança.
+                <button id="accept">Entendi</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 
+        Carrega a boblioteca JavaScript "jQuery" à partir de CDNJS.
+        Para saber mais sobre a jQuery, acesse os links:
+        • https://jquery.com/ → Site oficial
+        • https://www.w3schools.com/jquery/ → Curso completo
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- Carrega o JavaScript do aplicativo -->
+    <script src="/script.js"></script>
 
 </body>
+
 </html>
